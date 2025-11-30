@@ -1,16 +1,16 @@
-var socket = io();
+const socket = io();
 
 //Change socket to the below when not running locally
 //var socket = io.connect('http://example.com');
 window.addEventListener("load", function () {
-	var buttonState = document.getElementById("button");
+	const buttonState = document.getElementById("button");
 	socket.emit("init");
 	button.addEventListener("click", function () {
 		socket.emit("check", Number(this.value));
 	});
 
 
-	var checkbox = document.getElementsByClassName("checkbox")[0];
+	const checkbox = document.getElementsByClassName("checkbox")[0];
 	checkbox.addEventListener("click", function () {
 	console.log("IN");
 	if(checkbox.checked) {
